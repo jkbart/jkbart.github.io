@@ -5,7 +5,6 @@ from bs4 import Tag
 from bs4 import Comment
 import requests
 import os
-
 # md_yaml = "---\n" + \
 #           "layout: page\n" + \
 #           "title: AWWW task 1\n" + \
@@ -144,7 +143,7 @@ def process_website(file, website, search_for=[0]):
     file_w = open(file, "w")
     data = requests.get(website)
     # main_file_site.write(data.text)
-    os.makedirs(os.path.dirname("data_scraps/" + file.split(".md")[0]), exist_ok=True)
+    os.makedirs("data_scraps", exist_ok=True)
     open("data_scraps/" + file.split(".md")[0] + ".html", "w").write(data.text) # source code for debug
     main_soup = BeautifulSoup(data.text, 'html.parser')
     output = [" "]
