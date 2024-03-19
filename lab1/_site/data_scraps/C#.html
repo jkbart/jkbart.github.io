@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+	class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light"
+	lang="en-us"
+	dir="ltr"
+	data-authenticated="false"
+	data-auth-status-determined="false"
+	data-target="docs"
+	x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="A tour of C# - Overview - C#" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" />
+			<meta property="og:description" content="New to C#? Learn the basics of the language. Start with this overview." />
+
+	<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/logo_csharp.png" />
+
+	<meta property="og:image:alt" content="A tour of C# - Overview - C# | Microsoft Learn" />
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@MicrosoftLearn" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="apiPlatform" content="dotnet" />
+<meta name="author" content="BillWagner" />
+<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+<meta name="depot_name" content="VS.core-docs" />
+<meta name="description" content="New to C#? Learn the basics of the language. Start with this overview." />
+<meta name="document_id" content="14618620-83fc-fd68-93a9-03626c76d680" />
+<meta name="document_version_independent_id" content="ea7fbbaf-fd41-75cb-28fb-a2f36c8d3967" />
+<meta name="feedback_help_link_type" content="" />
+<meta name="feedback_help_link_url" content="" />
+<meta name="feedback_product_url" content="https://aka.ms/feedback/report?space=61" />
+<meta name="feedback_system" content="OpenSource" />
+<meta name="git_commit_id" content="f5c29f6b338151c743c318a79a7cab7b95daf19a" />
+<meta name="gitcommit" content="https://github.com/dotnet/docs/blob/f5c29f6b338151c743c318a79a7cab7b95daf19a/docs/csharp/tour-of-csharp/index.md" />
+<meta name="interactive_type" content="csharp" />
+<meta name="locale" content="en-us" />
+<meta name="ms.author" content="wiwagn" />
+<meta name="ms.date" content="03/14/2022" />
+<meta name="ms.devlang" content="csharp" />
+<meta name="ms.service" content="dotnet-csharp" />
+<meta name="ms.subservice" content="get-started" />
+<meta name="ms.topic" content="conceptual" />
+<meta name="original_content_git_url" content="https://github.com/dotnet/docs/blob/live/docs/csharp/tour-of-csharp/index.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}" />
+<meta name="schema" content="Conceptual" />
+<meta name="search.mshattr.devlang" content="csharp" />
+<meta name="show_latex" content="true" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="../toc.json" />
+<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+<meta name="updated_at" content="2024-02-21 11:40 AM" />
+<meta name="word_count" content="2849" />
+
+
+	<meta name="persistent_id" content="34122cad-1da2-99b5-2f0b-d1f5e34a1431" />
+	
+
+
+	<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c6f99e62-1cf6-4b71-af9b-649b05f80cce" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated" />
+
+	
+
+
+	<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/3f56b378-07a9-4fa1-afe8-9889fdc77628" data-source="generated" />
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated" />
+
+	
+
+
+	<meta name="scope" content=".NET" />
+	<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/docs/blob/main/docs/csharp/tour-of-csharp/index.md" />
+<link href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" rel="canonical">
+	<title>A tour of C# - Overview - C# | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/a0382f63.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			feedbackHelpLinkType:'',
+			feedbackHelpLinkUrl:'',
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'OpenSource',
+			feedbackGitHubRepo: 'dotnet/docs',
+			feedbackProductUrl: 'https://aka.ms/feedback/report?space=61',
+			extendBreadcrumb: false,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			isPrivateUnauthorized: false,
+			hasRecommendations: true,
+			openSourceFeedback: true,
+			openSourceFeedbackIssueUrl: 'https://github.com/dotnet/docs/issues/new?template=z-customer-feedback.yml',
+			openSourceFeedbackIssueTitle: '',
+			openSourceFeedbackIssueLabels: '',
+			contributors: [
+						{ name: "BillWagner", url: "https://github.com/BillWagner" },
+						{ name: "kengorman", url: "https://github.com/kengorman" },
+						{ name: "gewarren", url: "https://github.com/gewarren" },
+						{ name: "postmeback", url: "https://github.com/postmeback" },
+						{ name: "tdykstra", url: "https://github.com/tdykstra" },
+						{ name: "rodrimc", url: "https://github.com/rodrimc" },
+						{ name: "v-kents", url: "https://github.com/v-kents" },
+						{ name: "DCtheGeek", url: "https://github.com/DCtheGeek" },
+						{ name: "bnewcomb", url: "https://github.com/bnewcomb" },
+						{ name: "IEvangelist", url: "https://github.com/IEvangelist" },
+						{ name: "nschonni", url: "https://github.com/nschonni" },
+						{ name: "scottaddie", url: "https://github.com/scottaddie" },
+						{ name: "pkulikov", url: "https://github.com/pkulikov" },
+						{ name: "mairaw", url: "https://github.com/mairaw" },
+						{ name: "Youssef1313", url: "https://github.com/Youssef1313" },
+						{ name: "guardrex", url: "https://github.com/guardrex" },
+						{ name: "svick", url: "https://github.com/svick" }
+],
+			mathjax: {
+			},
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/67a45209.deprecation.js"></script>
+
+		<link rel="preconnect" href="//mscom.demdex.net" crossorigin>
+		<link rel="dns-prefetch" href="//target.microsoft.com">
+		<link rel="dns-prefetch" href="//microsoftmscompoc.tt.omtrdc.net">
+		<link
+			rel="preload"
+			as="script"
+			href="/static/third-party/adobe-target/at-js/2.9.0/at.js"
+			integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+			crossorigin="anonymous"
+			id="adobe-target-script"
+			type="application/javascript"
+		/>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/c684ca2d.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Skip to main content</a>
+
+		<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">This browser is no longer supported.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Download Microsoft Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+More info about Internet Explorer and Microsoft Edge					</a>
+				</div>
+			</div>
+		</div>
+		<!-- liquid-tag banners global -->
+
+		<!-- site header -->
+		<header id="ms--site-header" data-test-id="site-header-wrapper" class="display-none" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"></header>
+
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div id="ms--primary-nav" class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div id="ms--secondary-nav" class="nav-bar border-bottom is-hidden-mobile"></div>
+</header>
+		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Table of contents						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Exit focus mode</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="en-us" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="All breadcrumbs">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Read in English" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Read in English</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Add to collection">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Save</span>
+											</button>
+										
+
+											<a	data-contenteditbtn
+												class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet"
+												aria-label="Edit"
+												title="Edit This Document"
+												data-bi-name="edit"
+
+														href="https://github.com/dotnet/docs/blob/main/docs/csharp/tour-of-csharp/index.md"
+														data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/csharp/tour-of-csharp/index.md"
+														data-original_content_git_url_template="{repo}/blob/{branch}/docs/csharp/tour-of-csharp/index.md"
+														data-pr_repo=""
+														data-pr_branch=""
+											>
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="More actions">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+															<span class="contents-expand-title">Table of contents</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Read in English" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Read in English</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Add to collection"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Save</span>
+													</button>
+
+													<a	data-contenteditbtn
+														class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet"
+														aria-label="Edit"
+														title="Edit This Document"
+														data-bi-name="edit"
+
+																href="https://github.com/dotnet/docs/blob/main/docs/csharp/tour-of-csharp/index.md"
+																data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/csharp/tour-of-csharp/index.md"
+																data-original_content_git_url_template="{repo}/blob/{branch}/docs/csharp/tour-of-csharp/index.md"
+																data-pr_repo=""
+																data-pr_branch=""
+													>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Edit</span>
+													</a>
+
+													<button
+														class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus"
+														title="Print"
+														type="button"
+														aria-label="Print"
+														data-bi-name="print"
+														data-page-action-item="overflow-all"
+														data-popover-close
+														data-print-page
+														data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>Print</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none
+														border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+										<span class="contents-expand-title">Table of contents</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="a-tour-of-the-c-language">A tour of the C# language</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+														<li>
+Article														</li>
+															<li class="visibility-hidden-visual-diff">
+																<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2023-05-04T11:10:00Z" data-article-date-source="calculated">05/04/2023</time>
+															</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="View all contributors" class="contributors-button link-button" data-bi-name="contributors" title="View all contributors">
+																	17 contributors
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived>
+	<button
+		id="user-feedback-button"
+		data-test-id="conceptual-feedback-button"
+		class="button button-sm button-clear button-primary"
+		type="button"
+		data-bi-name="user-feedback-button"
+		data-user-feedback-button
+	>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Feedback</span>
+	</button>
+</div>
+									</div>
+
+									<div id="ms--inline-notifications" data-bi-name="inline-notification"></div>
+
+										<nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm" data-bi-name="intopic toc" role="navigation" aria-label="In this article">
+											<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">In this article</h2>
+										</nav>
+
+								<!-- <content> -->
+									<p>C# (pronounced &quot;See Sharp&quot;) is a modern, object-oriented, and type-safe programming language. C# enables developers to build many types of secure and robust applications that run in .NET. C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers. This tour provides an overview of the major components of the language in C# 11 and earlier. If you want to explore the language through interactive examples, try the <a href="tutorials/" data-linktype="relative-path">introduction to C#</a> tutorials.</p>
+<p>C# is an object-oriented, <em><strong>component-oriented</strong></em> programming language. C# provides language constructs to directly support these concepts, making C# a natural language in which to create and use software components. Since its origin, C# has added features to support new workloads and emerging software design practices. At its core, C# is an <em><strong>object-oriented</strong></em> language. You define types and their behavior.</p>
+<p>Several C# features help create robust and durable applications. <a href="../../standard/garbage-collection/" data-linktype="relative-path"><em><strong>Garbage collection</strong></em></a> automatically reclaims memory occupied by unreachable unused objects. <a href="../nullable-references" data-linktype="relative-path"><em><strong>Nullable types</strong></em></a> guard against variables that don't refer to allocated objects. <a href="../fundamentals/exceptions/" data-linktype="relative-path"><em><strong>Exception handling</strong></em></a> provides a structured and extensible approach to error detection and recovery. <a href="../language-reference/operators/lambda-expressions" data-linktype="relative-path"><em><strong>Lambda expressions</strong></em></a> support functional programming techniques. <a href="../linq/" data-linktype="relative-path"><em><strong>Language Integrated Query (LINQ)</strong></em></a> syntax creates a common pattern for working with data from any source. Language support for <a href="../asynchronous-programming/" data-linktype="relative-path"><em><strong>asynchronous operations</strong></em></a> provides syntax for building distributed systems. C# has a <a href="../fundamentals/types/" data-linktype="relative-path"><em><strong>unified type system</strong></em></a>. All C# types, including primitive types such as <code>int</code> and <code>double</code>, inherit from a single root <code>object</code> type. All types share a set of common operations. Values of any type can be stored, transported, and operated upon in a consistent manner. Furthermore, C# supports both user-defined <a href="../language-reference/builtin-types/reference-types" data-linktype="relative-path">reference types</a> and <a href="../language-reference/builtin-types/value-types" data-linktype="relative-path">value types</a>. C# allows dynamic allocation of objects and in-line storage of lightweight structures. C# supports generic methods and types, which provide increased type safety and performance. C# provides iterators, which enable implementers of collection classes to define custom behaviors for client code.</p>
+<p>C# emphasizes <em><strong>versioning</strong></em> to ensure programs and libraries can evolve over time in a compatible manner. Aspects of C#'s design that were directly influenced by versioning considerations include the separate <code>virtual</code> and <code>override</code> modifiers, the rules for method overload resolution, and support for explicit interface member declarations.</p>
+<h2 id="net-architecture">.NET architecture</h2>
+<p>C# programs run on .NET, a virtual execution system called the common language runtime (CLR) and a set of class libraries. The CLR is the implementation by Microsoft of the common language infrastructure (CLI), an international standard. The CLI is the basis for creating execution and development environments in which languages and libraries work together seamlessly.</p>
+<p>Source code written in C# is compiled into an <a href="../../standard/managed-code" data-linktype="relative-path">intermediate language (IL)</a> that conforms to the CLI specification. The IL code and resources, such as bitmaps and strings, are stored in an assembly, typically with an extension of <em>.dll</em>. An assembly contains a manifest that provides information about the assembly's types, version, and culture.</p>
+<p>When the C# program is executed, the assembly is loaded into the CLR. The CLR performs Just-In-Time (JIT) compilation to convert the IL code to native machine instructions. The CLR provides other services related to automatic garbage collection, exception handling, and resource management. Code that's executed by the CLR is sometimes referred to as &quot;managed code.&quot; &quot;Unmanaged code,&quot; is compiled into native machine language that targets a specific platform.</p>
+<p>Language interoperability is a key feature of .NET. IL code produced by the C# compiler conforms to the Common Type Specification (CTS). IL code generated from C# can interact with code that was generated from the .NET versions of F#, Visual Basic, C++. There are more than 20 other CTS-compliant languages. A single assembly may contain multiple modules written in different .NET languages. The types can reference each other as if they were written in the same language.</p>
+<p>In addition to the runtime services, .NET also includes extensive libraries. These libraries support many different workloads. They're organized into namespaces that provide a wide variety of useful functionality. The libraries include everything from file input and output to string manipulation to XML parsing, to web application frameworks to Windows Forms controls. The typical C# application uses the .NET class library extensively to handle common &quot;plumbing&quot; chores.</p>
+<p>For more information about .NET, see <a href="../../core/introduction" data-linktype="relative-path">Overview of .NET</a>.</p>
+<h2 id="hello-world">Hello world</h2>
+<p>The &quot;Hello, World&quot; program is traditionally used to introduce a programming language. Here it is in C#:</p>
+<pre>
+<code class="lang-csharp" data-interactive="csharp" data-interactive-mode="try-dotnet">using System;
+
+class Hello
+{
+    static void Main()
+    {
+        // This line prints &quot;Hello, World&quot; 
+        Console.WriteLine(&quot;Hello, World&quot;);
+    }
+}
+</code></pre>
+<p>The &quot;Hello, World&quot; program starts with a <code>using</code> directive that references the <code>System</code> namespace. Namespaces provide a hierarchical means of organizing C# programs and libraries. Namespaces contain types and other namespacesâfor example, the <code>System</code> namespace contains a number of types, such as the <code>Console</code> class referenced in the program, and many other namespaces, such as <code>IO</code> and <code>Collections</code>. A <code>using</code> directive that references a given namespace enables unqualified use of the types that are members of that namespace. Because of the <code>using</code> directive, the program can use <code>Console.WriteLine</code> as shorthand for <code>System.Console.WriteLine</code>.</p>
+<p>The <code>Hello</code> class declared by the &quot;Hello, World&quot; program has a single member, the method named <code>Main</code>. The <code>Main</code> method is declared with the <code>static</code> modifier. While instance methods can reference a particular enclosing object instance using the keyword <code>this</code>, static methods operate without reference to a particular object. By convention, a static method named <code>Main</code> serves as the entry point of a C# program.</p>
+<p>The line starting with <code>//</code> is a <em>single line comment</em>. C# single line comments start with  <code>//</code> and continue to the end of the current line. C# also supports <em>multi-line comments</em>. Multi-line comments start with <code>/*</code> and end with <code>*/</code>. The output of the program is produced by the <code>WriteLine</code> method of the <code>Console</code> class in the <code>System</code> namespace. This class is provided by the standard class libraries, which, by default, are automatically referenced by the compiler.</p>
+<p>You use the <a href="https://dotnet.microsoft.com/download" data-linktype="external">.NET SDK</a> to build your own &quot;Hello, World&quot; program. Once you install the SDK, you run <code>dotnet new console</code> to create a basic &quot;Hello, World&quot; program that you can modify. For more information, see the <a href="../../core/get-started" data-linktype="relative-path">Hello, World tutorial</a> in the .NET Get started section.</p>
+<h2 id="types-and-variables">Types and variables</h2>
+<p>A <em>type</em> defines the structure and behavior of any data in C#. The declaration of a type may include its members, base type, interfaces it implements, and operations permitted for that type. A <em>variable</em> is a label that refers to an instance of a specific type.</p>
+<p>There are two kinds of types in C#: <em>value types</em> and <em>reference types</em>. Variables of value types directly contain their data. Variables of reference types store references to their data, the latter being known as objects. With reference types, it's possible for two variables to reference the same object and possible for operations on one variable to affect the object referenced by the other variable. With value types, the variables each have their own copy of the data, and it isn't possible for operations on one to affect the other (except for <code>ref</code> and <code>out</code> parameter variables).</p>
+<p>An <em><strong>identifier</strong></em> is a variable name. An identifier is a sequence of unicode characters without any whitespace. An identifier may be a C# reserved word, if it's prefixed by <code>@</code>. Using a reserved word as an identifier can be useful when interacting with other languages.</p>
+<p>C#'s value types are further divided into <em>simple types</em>, <em>enum types</em>, <em>struct types</em>, <em>nullable value types</em>, and <em>tuple value types</em>. C#'s reference types are further divided into <em>class types</em>, <em>interface types</em>, <em>array types</em>, and <em>delegate types</em>.</p>
+<p>The following outline provides an overview of C#'s type system.</p>
+<ul>
+<li><a href="../language-reference/builtin-types/value-types" data-linktype="relative-path">Value types</a>
+<ul>
+<li><a href="../language-reference/builtin-types/value-types#built-in-value-types" data-linktype="relative-path">Simple types</a>
+<ul>
+<li><a href="../language-reference/builtin-types/integral-numeric-types" data-linktype="relative-path">Signed integral</a>: <code>sbyte</code>, <code>short</code>, <code>int</code>, <code>long</code></li>
+<li><a href="../language-reference/builtin-types/integral-numeric-types" data-linktype="relative-path">Unsigned integral</a>: <code>byte</code>, <code>ushort</code>, <code>uint</code>, <code>ulong</code></li>
+<li><a href="../../standard/base-types/character-encoding-introduction" data-linktype="relative-path">Unicode characters</a>: <code>char</code>, which represents a UTF-16 code unit</li>
+<li><a href="../language-reference/builtin-types/floating-point-numeric-types" data-linktype="relative-path">IEEE binary floating-point</a>: <code>float</code>, <code>double</code></li>
+<li><a href="../language-reference/builtin-types/floating-point-numeric-types" data-linktype="relative-path">High-precision decimal floating-point</a>: <code>decimal</code></li>
+<li>Boolean: <code>bool</code>, which represents Boolean valuesâvalues that are either <code>true</code> or <code>false</code></li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/enum" data-linktype="relative-path">Enum types</a>
+<ul>
+<li>User-defined types of the form <code>enum E {...}</code>. An <code>enum</code> type is a distinct type with named constants. Every <code>enum</code> type has an underlying type, which must be one of the eight integral types. The set of values of an <code>enum</code> type is the same as the set of values of the underlying type.</li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/struct" data-linktype="relative-path">Struct types</a>
+<ul>
+<li>User-defined types of the form <code>struct S {...}</code></li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/nullable-value-types" data-linktype="relative-path">Nullable value types</a>
+<ul>
+<li>Extensions of all other value types with a <code>null</code> value</li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/value-tuples" data-linktype="relative-path">Tuple value types</a>
+<ul>
+<li>User-defined types of the form <code>(T1, T2, ...)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="../language-reference/keywords/reference-types" data-linktype="relative-path">Reference types</a>
+<ul>
+<li><a href="../language-reference/keywords/class" data-linktype="relative-path">Class types</a>
+<ul>
+<li>Ultimate base class of all other types: <code>object</code></li>
+<li><a href="../../standard/base-types/character-encoding-introduction" data-linktype="relative-path">Unicode strings</a>: <code>string</code>, which represents a sequence of UTF-16 code units</li>
+<li>User-defined types of the form <code>class C {...}</code></li>
+</ul>
+</li>
+<li><a href="../language-reference/keywords/interface" data-linktype="relative-path">Interface types</a>
+<ul>
+<li>User-defined types of the form <code>interface I {...}</code></li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/arrays" data-linktype="relative-path">Array types</a>
+<ul>
+<li>Single-dimensional, multi-dimensional, and jagged. For example: <code>int[]</code>, <code>int[,]</code>, and <code>int[][]</code></li>
+</ul>
+</li>
+<li><a href="../language-reference/builtin-types/reference-types#the-delegate-type" data-linktype="relative-path">Delegate types</a>
+<ul>
+<li>User-defined types of the form <code>delegate int D(...)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>C# programs use <em>type declarations</em> to create new types. A type declaration specifies the name and the members of the new type. Six of C#'s categories of types are user-definable: class types, struct types, interface types, enum types, delegate types, and tuple value types. You can also declare <code>record</code> types, either <code>record struct</code>, or <code>record class</code>. Record types have compiler-synthesized members. You use records primarily for storing values, with minimal associated behavior.</p>
+<ul>
+<li>A <code>class</code> type defines a data structure that contains data members (fields) and function members (methods, properties, and others). Class types support single inheritance and polymorphism, mechanisms whereby derived classes can extend and specialize base classes.</li>
+<li>A <code>struct</code> type is similar to a class type in that it represents a structure with data members and function members. However, unlike classes, structs are value types and don't typically require heap allocation. Struct types don't support user-specified inheritance, and all struct types implicitly inherit from type <code>object</code>.</li>
+<li>An <code>interface</code> type defines a contract as a named set of public members. A <code>class</code> or <code>struct</code> that implements an <code>interface</code> must provide implementations of the interface's members. An <code>interface</code> may inherit from multiple base interfaces, and a <code>class</code> or <code>struct</code> may implement multiple interfaces.</li>
+<li>A <code>delegate</code> type represents references to methods with a particular parameter list and return type. Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters. Delegates are analogous to function types provided by functional languages. They're also similar to the concept of function pointers found in some other languages. Unlike function pointers, delegates are object-oriented and type-safe.</li>
+</ul>
+<p>The <code>class</code>, <code>struct</code>, <code>interface</code>, and <code>delegate</code> types all support generics, whereby they can be parameterized with other types.</p>
+<p>C# supports single-dimensional and multi-dimensional arrays of any type. Unlike the types listed above, array types don't have to be declared before they can be used. Instead, array types are constructed by following a type name with square brackets. For example, <code>int[]</code> is a single-dimensional array of <code>int</code>, <code>int[,]</code> is a two-dimensional array of <code>int</code>, and <code>int[][]</code> is a single-dimensional array of single-dimensional arrays, or a &quot;jagged&quot; array, of <code>int</code>.</p>
+<p>Nullable types don't require a separate definition. For each non-nullable type <code>T</code>, there's a corresponding nullable type <code>T?</code>, which can hold an additional value, <code>null</code>. For instance, <code>int?</code> is a type that can hold any 32-bit integer or the value <code>null</code>, and <code>string?</code> is a type that can hold any <code>string</code> or the value <code>null</code>.</p>
+<p>C#'s type system is unified such that a value of any type can be treated as an <code>object</code>. Every type in C# directly or indirectly derives from the <code>object</code> class type, and <code>object</code> is the ultimate base class of all types. Values of reference types are treated as objects simply by viewing the values as type <code>object</code>. Values of value types are treated as objects by performing <em>boxing</em> and <em>unboxing operations</em>. In the following example, an <code>int</code> value is converted to <code>object</code> and back again to <code>int</code>.</p>
+<pre>
+<code class="lang-csharp">int i = 123;
+object o = i;    // Boxing
+int j = (int)o;  // Unboxing
+</code></pre>
+<p>When a value of a value type is assigned to an <code>object</code> reference, a &quot;box&quot; is allocated to hold the value. That box is an instance of a reference type, and the value is copied into that box. Conversely, when an <code>object</code> reference is cast to a value type, a check is made that the referenced <code>object</code> is a box of the correct value type. If the check succeeds, the value in the box is copied to the value type.</p>
+<p>C#'s unified type system effectively means that value types are treated as <code>object</code> references &quot;on demand.&quot; Because of the unification, general-purpose libraries that use type <code>object</code> can be used with all types that derive from <code>object</code>, including both reference types and value types.</p>
+<p>There are several kinds of <em>variables</em> in C#, including fields, array elements, local variables, and parameters. Variables represent storage locations. Every variable has a type that determines what values can be stored in the variable, as shown below.</p>
+<ul>
+<li>Non-nullable value type
+<ul>
+<li>A value of that exact type</li>
+</ul>
+</li>
+<li>Nullable value type
+<ul>
+<li>A <code>null</code> value or a value of that exact type</li>
+</ul>
+</li>
+<li>object
+<ul>
+<li>A <code>null</code> reference, a reference to an object of any reference type, or a reference to a boxed value of any value type</li>
+</ul>
+</li>
+<li>Class type
+<ul>
+<li>A <code>null</code> reference, a reference to an instance of that class type, or a reference to an instance of a class derived from that class type</li>
+</ul>
+</li>
+<li>Interface type
+<ul>
+<li>A <code>null</code> reference, a reference to an instance of a class type that implements that interface type, or a reference to a boxed value of a value type that implements that interface type</li>
+</ul>
+</li>
+<li>Array type
+<ul>
+<li>A <code>null</code> reference, a reference to an instance of that array type, or a reference to an instance of a compatible array type</li>
+</ul>
+</li>
+<li>Delegate type
+<ul>
+<li>A <code>null</code> reference or a reference to an instance of a compatible delegate type</li>
+</ul>
+</li>
+</ul>
+<h2 id="program-structure">Program structure</h2>
+<p>The key organizational concepts in C# are <a href="../fundamentals/program-structure/" data-linktype="relative-path"><em><strong>programs</strong></em></a>, <a href="../fundamentals/types/namespaces" data-linktype="relative-path"><em><strong>namespaces</strong></em></a>, <a href="../fundamentals/types/" data-linktype="relative-path"><em><strong>types</strong></em></a>, <a href="../programming-guide/classes-and-structs/members" data-linktype="relative-path"><em><strong>members</strong></em></a>, and <a href="../../standard/assembly/" data-linktype="relative-path"><em><strong>assemblies</strong></em></a>. Programs declare types, which contain members and can be organized into namespaces. Classes, structs, and interfaces are examples of types. Fields, methods, properties, and events are examples of members. When C# programs are compiled, they're physically packaged into assemblies. Assemblies typically have the file extension <code>.exe</code> or <code>.dll</code>, depending on whether they implement <em><strong>applications</strong></em> or <em><strong>libraries</strong></em>, respectively.</p>
+<p>As a small example, consider the below C# code:</p>
+<pre>
+<code class="lang-csharp">namespace Acme.Collections;
+
+public class Stack&lt;T&gt;
+{
+    Entry _top;
+
+    public void Push(T data)
+    {
+        _top = new Entry(_top, data);
+    }
+
+    public T Pop()
+    {
+        if (_top == null)
+        {
+            throw new InvalidOperationException();
+        }
+        T result = _top.Data;
+        _top = _top.Next;
+
+        return result;
+    }
+
+    class Entry
+    {
+        public Entry Next { get; set; }
+        public T Data { get; set; }
+
+        public Entry(Entry next, T data)
+        {
+            Next = next;
+            Data = data;
+        }
+    }
+}
+</code></pre>
+<p>The fully qualified name of this class is <code>Acme.Collections.Stack</code>. The class contains several members: a field named <code>_top</code>, two methods named <code>Push</code> and <code>Pop</code>, and a nested class named <code>Entry</code>. The <code>Entry</code> class further contains three members: a property named <code>Next</code>, a property named <code>Data</code>, and a constructor. The <code>Stack</code> is a <em>generic</em> class. It has one type parameter, <code>T</code> that is replaced with a concrete type when it's used.</p>
+<p>A <em>stack</em> is a &quot;first in - last out&quot; (FILO) collection. New elements are added to the top of the stack. When an element is removed, it's removed from the top of the stack. The previous example declares the <code>Stack</code> type that defines the storage and behavior for a stack. You can declare a variable that refers to an instance of the <code>Stack</code> type to use that functionality.</p>
+<p>Assemblies contain executable code in the form of Intermediate Language (IL) instructions, and symbolic information in the form of metadata. Before it's executed, the Just-In-Time (JIT) compiler of .NET Common Language Runtime converts the IL code in an assembly to processor-specific code.</p>
+<p>Because an assembly is a self-describing unit of functionality containing both code and metadata, there's no need for <code>#include</code> directives and header files in C#. The public types and members contained in a particular assembly are made available in a C# program simply by referencing that assembly when compiling the program. For example, this program uses the <code>Acme.Collections.Stack</code> class from the <code>acme.dll</code> assembly:</p>
+<pre>
+<code class="lang-csharp">class Example
+{
+    public static void Main()
+    {
+        var s = new Acme.Collections.Stack&lt;int&gt;();
+        s.Push(1); // stack contains 1
+        s.Push(10); // stack contains 1, 10
+        s.Push(100); // stack contains 1, 10, 100
+        Console.WriteLine(s.Pop()); // stack contains 1, 10
+        Console.WriteLine(s.Pop()); // stack contains 1
+        Console.WriteLine(s.Pop()); // stack is empty
+    }
+}
+</code></pre>
+<p>To compile this program, you would need to <em>reference</em> the assembly containing the stack class defined in the earlier example.</p>
+<p>C# programs can be stored in several source files. When a C# program is compiled, all of the source files are processed together, and the source files can freely reference each other. Conceptually, it's as if all the source files were concatenated into one large file before being processed. Forward declarations are never needed in C# because, with few exceptions, declaration order is insignificant. C# doesn't limit a source file to declaring only one public type nor does it require the name of the source file to match a type declared in the source file.</p>
+<p>Further articles in this tour explain these organizational blocks.</p>
+<div class="step-by-step">
+<p><a href="types" data-linktype="relative-path">Next</a></p>
+</div>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+<section class="position-relative margin-top-lg border border-radius padding-xxs" data-bi-name="open-source-feedback-section" data-open-source-feedback-section hidden>
+	<div class="display-flex flex-direction-column flex-direction-row-tablet">
+		<div class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium">
+			<div class="display-flex flex-direction-column">
+				<div class="padding-bottom-xxs">
+					<span class="icon margin-right-xxs" aria-hidden="true">
+						<span class="docon docon-brand-github"></span>
+					</span>
+					<span class="font-weight-semibold"
+						>Collaborate with us on GitHub					</span>
+				</div>
+				<span class="line-height-normal">
+					The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+				</span>
+			</div>
+		</div>
+		<div class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly">
+			<div class="media">
+				<div class="media-left">
+					<div class="image image-36x36" hidden data-open-source-image-container>
+						<img class="theme-display is-light" src="https://learn.microsoft.com/media/logos/logo_net.svg" aria-hidden="true" data-open-source-image-light/>
+						<img class="theme-display is-dark is-high-contrast" src="https://learn.microsoft.com/media/logos/logo_net.svg" aria-hidden="true" data-open-source-image-dark/>
+					</div>
+					</div>
+				
+				<div class="media-content">
+					<p class="font-size-xl font-weight-semibold margin-bottom-xxs" data-open-source-product-title>.NET</p>
+					<div class="display-flex gap-xs flex-direction-column">
+						<p class="line-height-normal" data-open-source-product-description></p>
+						<div class="display-flex gap-xs flex-direction-column">
+							<a href="" data-github-link>
+								<span class="icon margin-right-xxs" aria-hidden="true">
+									<span class="docon docon-bug"></span>
+								</span>
+								<span>Open a documentation issue</span>
+							</a>
+							<a href="https://aka.ms/feedback/report?space=61" class="display-block margin-top-auto font-size-md" data-feedback-product-url>
+								<span class="icon margin-right-xxs" aria-hidden="true">
+									<span class="docon docon-feedback"></span>
+								</span>
+								<span>Provide product feedback</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="feedback-section position-relative" data-bi-name="feedback-section">
+    <h2 id="feedback" class="title is-3 margin-top-sm">Feedback</h2>
+
+    <div class="alert choose-feedback-type padding-bottom-sm">
+		<p id="git-issues-deprecation-notice">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-status-info-outline">
+			</span>
+			</span>Coming soon: Throughout 2024 we will be phasing out GitHub Issues as the feedback mechanism for content and replacing it with a new feedback system. For more information see: <a href="https://aka.ms/ContentUserFeedback" data-bi-name="content-user-feedback">https://aka.ms/ContentUserFeedback</a>.		</p>
+
+        <p id="send-feedback-about" class="margin-top-sm">Submit and view feedback for</p>
+
+        <div class="choose-feedback-buttons buttons margin-top-xs">
+                <a class="button has-external-link-indicator feedback-type-product" aria-label="Send feedback about this product" href="https://aka.ms/feedback/report?space=61" data-bi-name="product-feedback">
+                    <span>This product</span>
+                </a>
+			<a class="button feedback-type-product github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-brand-github"></span>
+				</span>
+				<span>This page</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container display-flex justify-content-flex-end margin-block-xxs">
+        <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/dotnet/docs/issues">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>View all page feedback</span>
+        </a>
+    </div>
+</section>
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<aside
+								id="ms--additional-resources-mobile"
+								aria-label="Additional resources"
+								class="display-none-desktop display-none-print"
+							>
+								<hr class="hr" hidden />
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>Additional resources</h2>
+								<section id="right-rail-recommendations-mobile" data-bi-name="recommendations" hidden></section>
+								<section id="right-rail-training-mobile" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden></section>
+							</aside>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							id="ms--additional-resources"
+							class="right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Additional resources"
+						>
+							<div id="affixed-right-container" class="margin-top-sm-tablet" data-bi-name="right-column">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md" hidden>Additional resources</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" hidden></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="In this article">
+									<h3>In this article</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+	</section>
+
+		<script src="/static/third-party/MathJax/3.2.2/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
