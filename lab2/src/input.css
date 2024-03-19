@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.header {
-    grid-area: header;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main {
-    grid-area: main;
-}
-.sidebar {
-    grid-area: sidebar;
-}
-.footer {
-    grid-area: footer;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
-    grid-template-rows: 50px 1fr 50px; 
-    grid-template-areas: 
-      "header header header header"
-      "sidebar main main main"
-      "footer footer footer footer";
-    width: 100vw;
-    height: 100vh;
+@layer components {
+    .header {
+        grid-area: header;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @apply font-extrabold text-2xl;
+    }
+    .main {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        @apply bg-lime-200;
+    }
 
-    gap: 10px 10px;
+    .sidebar {
+        grid-area: sidebar;
+        align-content: flex-start;
+        @apply text-center;
+    }
+    
+    .footer {
+        grid-area: footer;
+        @apply text-center;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr 100px;
+        grid-template-rows: 50px 1fr 50px; 
+        grid-template-areas: 
+        "header header header header"
+        "sidebar main main main"
+        "footer footer footer footer";
+        @apply h-screen w-screen gap-1 p-1;
+    }
 }
