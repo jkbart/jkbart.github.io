@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-dark">
+  <div class="container">
+  <main class="border p-3 my-4">
+    <div class="p-5 mb-4 border text-white text-center">
+      <h1> Bootstrap form </h1>
+      <p>Example Bootstrap form</p>
+    </div>
+
+      <form class="was-validated mb-3 px-3">
+        <div class="row p-1">
+          <div class="col-md-6 form-floating gx-1 pr-1 pb-3">
+            <input type="text" class="form-control" id="first-name" placeholder="Enter first name" name="first-name" required>
+            <label for="first-name">First name</label>
+            <div class="invalid-feedback">
+              Please enter your first name.
+            </div>
+          </div>
+          <div class="col-md-6 form-floating gx-1 pl-1 pb-3">
+            <input type="text" class="form-control" id="second-name" placeholder="Enter second name" name="second-name" required> 
+            <label for="second-name">Second name</label>
+            <div class="invalid-feedback">
+              Please enter your second name.
+            </div>
+          </div>
+          <div class="form-floating gx-1 pl-1">
+            <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            <label for="email">Email</label>
+            <div class="invalid-feedback">
+              Please enter your email.
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+        
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="opt2">
+          <label class="form-check-label" for="check1">Option 1</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="opt2">
+          <label class="form-check-label" for="check2">Option 2</label>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">
+          <label class="form-check-label" for="radio1">Option 1</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+          <label class="form-check-label" for="radio2">Option 2</label>
+        </div>
+
+        <hr class="my-4">
+
+        <div>
+          <label class="text-white pb-1" for="flower">Pick one flower:</label>
+          <select class="form-select" id="flower">
+            <option>Dianella</option>
+            <option>Lily of the Nile</option>
+            <option>Wandflower</option>
+            <option>Jacob's Ladder</option>
+            <option>Lavatera</option>
+            <option>Powder Puff</option>
+            <option>Plectranthus scutellarioides</option>
+            <option>Lechenaultia</option>
+            <option>Daffodil</option>
+            <option>Cosmos</option>
+            <option>Watsonia</option>
+            <option>Winterberry</option>
+            <option>Nierembergia</option>
+            <option>Chamelaucium uncinatum</option>
+            <option>Linaria</option>
+            <option>Viola tri-colour</option>
+            <option>Allium roseum</option>
+            <option>Twinspur</option>
+            <option>Syringa</option>
+            <option>Zenobia</option>
+          </select>
+      </div>
+
+      <hr class="my-4">
+
+      <div>
+        <label for="comment" class="text-white pb-1">Comments:</label>
+        <textarea class="form-control" rows="5" id="comment" name="text">Comment section</textarea> 
+      </div>
+
+      <hr class="my-4">
+
+      <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+      </form>
+      
+
+  </main>
+  </div>
+</body>
+</html>
