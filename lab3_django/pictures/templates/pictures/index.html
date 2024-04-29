@@ -1,0 +1,13 @@
+<a href="{% url 'admin:index' %}"> Panel admina </a>
+
+{% if drawings %}
+    <ul>
+        {% for drawing in drawings %}
+        <li>
+            Drawing by {{ drawing.author }}: <a href="{% url 'pictures:detail' drawing.id %}"> {{ drawing.name }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No drawings are available.</p>
+{% endif %}

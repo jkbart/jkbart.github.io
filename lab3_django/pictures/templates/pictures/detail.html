@@ -1,0 +1,56 @@
+<a href="{% url 'pictures:index' %}"> Powrót do listy </a>
+<br><br>
+
+{# <p>{{drawing}} </p>      #}
+
+{% if drawing %}
+    <svg width="100" height="100">
+        {% for rectangle in drawing.rectangle_set.all %}
+        <rect x="{{ rectangle.x }}" y="{{ rectangle.y }}" width="{{ rectangle.width }}" height="{{ rectangle.height }}" fill="{{ rectangle.color }}"/>
+        {% endfor %}
+    </svg>
+
+
+{% if user.is_authenticated %} {% if user == drawing.author %}
+
+<table>
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>width</th>
+    <th>height</th>
+    <th>kolor</th>
+    <th>actions</th>
+  </tr>
+ {% for rectangle in drawing.rectangle_set.all %}
+  <tr>
+    <td> {{rectangle.x }} </td>
+    <td> {{rectangle.y }} </td>
+    <td> {{rectangle.width }} </td>
+    <td> {{rectangle.height }} </td>
+    <td> {{rectangle.color }} </td>
+    <td> <a href="{% url 'pictures:remove_rectangle' rectangle.id %}"> Remove </a> </td>
+  </tr>
+ {% endfor %}
+</table> 
+
+<br><br>
+
+<b> Add new rectangle </b>     
+<form method="post" action="{% url 'pictures:add_rectangle' drawing.id %}">
+    {% csrf_token %}
+  <label for="x">x:</label><br> <input type="number" id="x" name="x" value="0"><br> 
+  <label for="y">y:</label><br> <input type="number" id="y" name="y" value="0"><br>
+  <label for="width">width:</label><br> <input type="number" id="width" name="width" value="0"><br>
+  <label for="height">height:</label><br> <input type="number" id="height" name="height" value="0"><br>
+  <label for="color">color:</label><br> <input type="text" id="color" name="color" value="black"><br>
+  <br>
+  <button type="submit">Add Rectangle</button>
+</form> 
+
+
+{% endif %} {% endif %}
+
+{% else %}
+    <p>There is no drawing</p>
+{% endif %}
