@@ -1,56 +1,103 @@
-<a href="{% url 'pictures:index' %}"> Powrót do listy </a>
-<br><br>
+<!DOCTYPE html>
+<html lang="en">
 
-{# <p>{{drawing}} </p>      #}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
 
-{% if drawing %}
-    <svg width="100" height="100">
-        {% for rectangle in drawing.rectangle_set.all %}
-        <rect x="{{ rectangle.x }}" y="{{ rectangle.y }}" width="{{ rectangle.width }}" height="{{ rectangle.height }}" fill="{{ rectangle.color }}"/>
-        {% endfor %}
-    </svg>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto py-8">
+
+        <a href="{% url 'pictures:listing' %}" class="text-blue-500 hover:underline">Powrót do listy</a>
+        <br><br>
+
+        {% load mathfilters %}
+
+        {% if drawing %}
+        <div class="bg-white shadow-md rounded-lg p-8">
+            <h1 class="text-3xl font-bold mb-4">{{ drawing.name }}</h1>
+
+            <svg width="{{drawing.width }}" height="{{drawing.height }}">
+                {% for rectangle in drawing.rectangle_set.all %}
+                <rect x="{{ rectangle.x }}" y="{{ rectangle.y }}" width="{{ rectangle.width }}" height="{{ rectangle.height }}" fill="{{ rectangle.color }}"/>
+                {% endfor %}
+            </svg>
+
+            <h2 class="text-xl font-bold mb-2">Opis:</h2>
+            <p>{{ drawing.description }}</p>
+
+            {% if user.is_authenticated and user in drawing.author.all %}
+            <div class="mt-8">
+                <h2 class="text-xl font-bold mb-4">Dane:</h2>
+                <p>{{ drawing.width }} x {{ drawing.height }}</p>
+
+                <h2 class="text-xl font-bold mt-8 mb-4">Prostokąty:</h2>
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2 text-left border">x</th>
+                            <th class="px-4 py-2 text-left border">y</th>
+                            <th class="px-4 py-2 text-left border">width</th>
+                            <th class="px-4 py-2 text-left border">height</th>
+                            <th class="px-4 py-2 text-left border">kolor</th>
+                            <th class="px-4 py-2 text-left border">actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rectangle in drawing.rectangle_set.all %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ rectangle.x }}</td>
+                            <td class="border px-4 py-2">{{ rectangle.y }}</td>
+                            <td class="border px-4 py-2">{{ rectangle.width }}</td>
+                            <td class="border px-4 py-2">{{ rectangle.height }}</td>
+                            <td class="border px-4 py-2">{{ rectangle.color }}</td>
+                            <td class="border px-4 py-2"><a href="{% url 'pictures:remove_rectangle' rectangle.id %}" class="text-blue-500 hover:underline">Remove</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
 
 
-{% if user.is_authenticated %} {% if user == drawing.author %}
+                <div class="mt-8">
+                    <h2 class="text-xl font-bold mb-4">Add new rectangle</h2>
+                    <form method="post" action="{% url 'pictures:add_rectangle' drawing.id %}" class="space-y-4 flex justify-center flex-wrap">
+                        {% csrf_token %}
+                        <div class="p-5">
+                        <label for="x" class="block">x:</label>
+                        <input type="number" id="x" name="x" value="0" class="border border-gray-300 rounded py-1 px-2">
+                        </div>
+                        <div class="p-5">
+                        <label for="y" class="block">y:</label>
+                        <input type="number" id="y" name="y" value="0" class="border border-gray-300 rounded py-1 px-2">
+                        </div>
+                        <div class="p-5">
+                        <label for="width" class="block">width:</label>
+                        <input type="number" id="width" name="width" value="0" class="border border-gray-300 rounded py-1 px-2">
+                        </div>
+                        <div class="p-5">
+                        <label for="height" class="block">height:</label>
+                        <input type="number" id="height" name="height" value="0" class="border border-gray-300 rounded py-1 px-2">
+                        </div>
+                        <div class="p-5">
+                        <label for="color" class="block">color:</label>
+                        <input type="text" id="color" name="color" value="black" class="border border-gray-300 rounded py-1 px-2">
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Add Rectangle</button>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% else %}
+        <p class="text-red-500">There is no drawing</p>
+        {% endif %}
 
-<table>
-  <tr>
-    <th>x</th>
-    <th>y</th>
-    <th>width</th>
-    <th>height</th>
-    <th>kolor</th>
-    <th>actions</th>
-  </tr>
- {% for rectangle in drawing.rectangle_set.all %}
-  <tr>
-    <td> {{rectangle.x }} </td>
-    <td> {{rectangle.y }} </td>
-    <td> {{rectangle.width }} </td>
-    <td> {{rectangle.height }} </td>
-    <td> {{rectangle.color }} </td>
-    <td> <a href="{% url 'pictures:remove_rectangle' rectangle.id %}"> Remove </a> </td>
-  </tr>
- {% endfor %}
-</table> 
+    </div>
 
-<br><br>
+</body>
 
-<b> Add new rectangle </b>     
-<form method="post" action="{% url 'pictures:add_rectangle' drawing.id %}">
-    {% csrf_token %}
-  <label for="x">x:</label><br> <input type="number" id="x" name="x" value="0"><br> 
-  <label for="y">y:</label><br> <input type="number" id="y" name="y" value="0"><br>
-  <label for="width">width:</label><br> <input type="number" id="width" name="width" value="0"><br>
-  <label for="height">height:</label><br> <input type="number" id="height" name="height" value="0"><br>
-  <label for="color">color:</label><br> <input type="text" id="color" name="color" value="black"><br>
-  <br>
-  <button type="submit">Add Rectangle</button>
-</form> 
-
-
-{% endif %} {% endif %}
-
-{% else %}
-    <p>There is no drawing</p>
-{% endif %}
+</html>
