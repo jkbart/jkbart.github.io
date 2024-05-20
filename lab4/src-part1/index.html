@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <div class="mb-8">
+            <form id="rectForm" class="flex flex-wrap justify-center space-x-4">
+                <div class="flex items-center space-x-4">
+                    <label for="color" class="text-gray-600">Kolor:</label>
+                    <input type="color" id="color" name="color" class="rounded-lg">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <label for="x1" class="text-gray-600">X1:</label>
+                    <input type="number" id="x1" name="x1" class="rounded-lg">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <label for="y1" class="text-gray-600">Y1:</label>
+                    <input type="number" id="y1" name="y1" class="rounded-lg">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <label for="x2" class="text-gray-600">X2:</label>
+                    <input type="number" id="x2" name="x2" class="rounded-lg">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <label for="y2" class="text-gray-600">Y2:</label>
+                    <input type="number" id="y2" name="y2" class="rounded-lg">
+                </div>
+                <button type="button" id="addRectBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Dodaj</button>
+                <button type="button" id="remRectBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Usuń</button>
+            </form>
+        </div>
+        <svg id="svgCanvas" class="border border-gray-600 mx-auto" width="1000" height="1000"></svg>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
